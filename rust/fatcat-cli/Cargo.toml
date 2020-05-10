@@ -4,14 +4,19 @@ version = "0.1.0"
 authors = ["Bryan Newbold <bnewbold@robocracy.org>"]
 edition = "2018"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
-fatcat-openapi = { version = "*", path = "../fatcat-openapi", features = ["client"] }
-toml = "*"
-termcolor = "*"
-atty = "*"
-tabwriter = "*"
-syntect = "*"
-human-panic = "*"
-exitcode = "*"
+fatcat-openapi = { version = "*", path = "../fatcat-openapi", default-features = false, features = ["client"] }
+toml = "0.5"
+termcolor = "1.1"
+atty = "0.2"
+tabwriter = "1.2"
+#syntect = "4"
+human-panic = "1"
+exitcode = "1"
+structopt = "0.3"
+swagger = "4"
+tokio = "0.1.17"
+serde_json = "1"
+
+[profile.release]
+lto = true
