@@ -9,7 +9,7 @@ repository = "https://github.com/internetarchive/fatcat"
 license = "AGPL-3.0-or-later"
 
 [workspace]
-members = ["fatcat-openapi"]
+members = ["fatcat-openapi", "fatcat-cli"]
 
 [dependencies]
 fatcat-openapi = {version = "*", path = "fatcat-openapi", features = ["server"] }
