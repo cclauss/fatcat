@@ -1,0 +1,17 @@
+[package]
+name = "fatcat-cli"
+version = "0.1.0"
+authors = ["Bryan Newbold <bnewbold@robocracy.org>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+fatcat-openapi = { version = "*", path = "../fatcat-openapi", features = ["client"] }
+toml = "*"
+termcolor = "*"
+atty = "*"
+tabwriter = "*"
+syntect = "*"
+human-panic = "*"
+exitcode = "*"
