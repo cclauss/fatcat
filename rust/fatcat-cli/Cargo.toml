@@ -1,22 +1,37 @@
 [package]
 name = "fatcat-cli"
-version = "0.1.0"
-authors = ["Bryan Newbold <bnewbold@robocracy.org>"]
+version = "0.3.0-dev"
 edition = "2018"
+authors = ["Bryan Newbold <bnewbold@robocracy.org>"]
+license = "AGPL-3+"
+description = "CLI tool for fatcat.wiki, an open digital catalog of research papers"
+readme = "README_cli.md"
+homepage = "https://fatcat.wiki"
+repository = "https://github.com/internetarchive/fatcat"
+keywords = ["cli", "fatcat", "digital-library"]
+categories = ["command-line-utilities"]
+
 
 [dependencies]
 fatcat-openapi = { version = "*", path = "../fatcat-openapi", default-features = false, features = ["client"] }
 toml = "0.5"
-termcolor = "1.1"
+termcolor = "1"
 atty = "0.2"
 tabwriter = "1.2"
-#syntect = "4"
 human-panic = "1"
-exitcode = "1"
 structopt = "0.3"
 swagger = "4"
+hyper = "0.12"
 tokio = "0.1.17"
 serde_json = "1"
+failure = "0.1"
+exitfailure = "0.5"
+log = "0.4"
+env_logger = "0.7"
+regex = "1"
+lazy_static = "1"
+serde = "0.8"
 
-[profile.release]
-lto = true
+
+[dev-dependencies]
+assert_cmd = "1"
